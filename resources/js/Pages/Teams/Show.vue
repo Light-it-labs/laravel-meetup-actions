@@ -15,6 +15,8 @@
                             :available-roles="availableRoles"
                             :user-permissions="permissions" />
 
+                <theme-settings-team-form :team="team" :permissions="permissions" />
+
                 <template v-if="permissions.canDeleteTeam && ! team.personal_team">
                     <jet-section-border />
 
@@ -32,6 +34,7 @@
     import JetSectionBorder from '@/Jetstream/SectionBorder.vue'
     import TeamMemberManager from '@/Pages/Teams/Partials/TeamMemberManager.vue'
     import UpdateTeamNameForm from '@/Pages/Teams/Partials/UpdateTeamNameForm.vue'
+    import ThemeSettingsTeamForm from '@/Pages/Teams/Partials/ThemeSettingsTeamForm.vue'
 
     export default defineComponent({
         props: [
@@ -46,6 +49,7 @@
             JetSectionBorder,
             TeamMemberManager,
             UpdateTeamNameForm,
+            ThemeSettingsTeamForm,
         },
     })
 </script>

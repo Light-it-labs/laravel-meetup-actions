@@ -41,4 +41,9 @@ class Team extends JetstreamTeam
         'updated' => TeamUpdated::class,
         'deleted' => TeamDeleted::class,
     ];
+
+    public function themeSetting()
+    {
+        return $this->hasOne(ThemeSetting::class, 'team_id');
+    }
 }
