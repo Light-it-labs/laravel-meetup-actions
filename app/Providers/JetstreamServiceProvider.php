@@ -11,6 +11,8 @@ use App\Actions\Jetstream\RemoveTeamMember;
 use App\Actions\Jetstream\UpdateTeamName;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Jetstream\Jetstream;
+use Illuminate\Http\Request;
+
 
 class JetstreamServiceProvider extends ServiceProvider
 {
@@ -40,6 +42,15 @@ class JetstreamServiceProvider extends ServiceProvider
         Jetstream::removeTeamMembersUsing(RemoveTeamMember::class);
         Jetstream::deleteTeamsUsing(DeleteTeam::class);
         Jetstream::deleteUsersUsing(DeleteUser::class);
+
+        Jetstream::inertia()->whenRendering(
+            'Teams/Show',
+            function (Request $request, array $data) {
+                return array_merge($data, [
+                    'settings' => $request->user()->currentTeam->themeSetting->payload
+                ]);
+            }
+        );
     }
 
     /**

@@ -15,7 +15,7 @@
                             :available-roles="availableRoles"
                             :user-permissions="permissions" />
 
-                <theme-settings-team-form :team="team" :permissions="permissions" />
+                <theme-settings-team-form :team="team" :permissions="permissions" :settings="settings" />
 
                 <template v-if="permissions.canDeleteTeam && ! team.personal_team">
                     <jet-section-border />
@@ -41,6 +41,7 @@
             'team',
             'availableRoles',
             'permissions',
+            'settings'
         ],
 
         components: {

@@ -23681,15 +23681,15 @@ __webpack_require__.r(__webpack_exports__);
     JetInputError: _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_5__["default"],
     JetLabel: _Jetstream_Label__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
-  props: ['team', 'permissions'],
+  props: ['team', 'permissions', 'settings'],
   data: function data() {
     return {
       form: this.$inertia.form({
-        image: '',
-        title: '',
-        header: '',
-        primaryColor: '',
-        secondaryColor: ''
+        image: this.settings.image,
+        title: this.settings.title,
+        header: this.settings.header,
+        primaryColor: this.settings.theme.colors.primaryColor,
+        secondaryColor: this.settings.theme.colors.secondaryColor
       })
     };
   },
@@ -23785,7 +23785,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
-  props: ['team', 'availableRoles', 'permissions'],
+  props: ['team', 'availableRoles', 'permissions', 'settings'],
   components: {
     AppLayout: _Layouts_AppLayout_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     DeleteTeamForm: _Pages_Teams_Partials_DeleteTeamForm_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
@@ -29421,10 +29421,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* PROPS */
       , ["team", "available-roles", "user-permissions"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_theme_settings_team_form, {
         team: _ctx.team,
-        permissions: _ctx.permissions
+        permissions: _ctx.permissions,
+        settings: _ctx.settings
       }, null, 8
       /* PROPS */
-      , ["team", "permissions"]), _ctx.permissions.canDeleteTeam && !_ctx.team.personal_team ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+      , ["team", "permissions", "settings"]), _ctx.permissions.canDeleteTeam && !_ctx.team.personal_team ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         key: 0
       }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_section_border), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_delete_team_form, {
         "class": "mt-10 sm:mt-0",

@@ -101,16 +101,16 @@ export default defineComponent({
         JetLabel,
     },
 
-    props: ['team', 'permissions'],
+    props: ['team', 'permissions', 'settings'],
 
     data() {
         return {
             form: this.$inertia.form({
-                image: '',
-                title: '',
-                header: '',
-                primaryColor: '',
-                secondaryColor: '',
+                image: this.settings.image,
+                title: this.settings.title,
+                header: this.settings.header,
+                primaryColor: this.settings.theme.colors.primaryColor,
+                secondaryColor: this.settings.theme.colors.secondaryColor,
             })
         }
     },
