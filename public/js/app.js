@@ -23647,6 +23647,64 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=script&lang=js":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=script&lang=js ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _Jetstream_ActionMessage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Jetstream/ActionMessage */ "./resources/js/Jetstream/ActionMessage.vue");
+/* harmony import */ var _Jetstream_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Jetstream/Button */ "./resources/js/Jetstream/Button.vue");
+/* harmony import */ var _Jetstream_FormSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Jetstream/FormSection */ "./resources/js/Jetstream/FormSection.vue");
+/* harmony import */ var _Jetstream_Input__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Jetstream/Input */ "./resources/js/Jetstream/Input.vue");
+/* harmony import */ var _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Jetstream/InputError */ "./resources/js/Jetstream/InputError.vue");
+/* harmony import */ var _Jetstream_Label__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Jetstream/Label */ "./resources/js/Jetstream/Label.vue");
+
+
+
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
+  components: {
+    JetActionMessage: _Jetstream_ActionMessage__WEBPACK_IMPORTED_MODULE_1__["default"],
+    JetButton: _Jetstream_Button__WEBPACK_IMPORTED_MODULE_2__["default"],
+    JetFormSection: _Jetstream_FormSection__WEBPACK_IMPORTED_MODULE_3__["default"],
+    JetInput: _Jetstream_Input__WEBPACK_IMPORTED_MODULE_4__["default"],
+    JetInputError: _Jetstream_InputError__WEBPACK_IMPORTED_MODULE_5__["default"],
+    JetLabel: _Jetstream_Label__WEBPACK_IMPORTED_MODULE_6__["default"]
+  },
+  props: ['team', 'permissions', 'settings'],
+  data: function data() {
+    return {
+      form: this.$inertia.form({
+        image: this.settings.image,
+        title: this.settings.title,
+        header: this.settings.header,
+        primaryColor: this.settings.theme.colors.primaryColor,
+        secondaryColor: this.settings.theme.colors.secondaryColor
+      })
+    };
+  },
+  methods: {
+    updateTeamSettings: function updateTeamSettings() {
+      this.form.put(route('teams.settings.update', this.team), {
+        errorBag: 'updateTeamSettings',
+        preserveScroll: true
+      });
+    }
+  }
+}));
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue?vue&type=script&lang=js":
 /*!**********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue?vue&type=script&lang=js ***!
@@ -23718,6 +23776,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jetstream_SectionBorder_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Jetstream/SectionBorder.vue */ "./resources/js/Jetstream/SectionBorder.vue");
 /* harmony import */ var _Pages_Teams_Partials_TeamMemberManager_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/Pages/Teams/Partials/TeamMemberManager.vue */ "./resources/js/Pages/Teams/Partials/TeamMemberManager.vue");
 /* harmony import */ var _Pages_Teams_Partials_UpdateTeamNameForm_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/Pages/Teams/Partials/UpdateTeamNameForm.vue */ "./resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue");
+/* harmony import */ var _Pages_Teams_Partials_ThemeSettingsTeamForm_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/Pages/Teams/Partials/ThemeSettingsTeamForm.vue */ "./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue");
+
 
 
 
@@ -23725,13 +23785,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue__WEBPACK_IMPORTED_MODULE_0__.defineComponent)({
-  props: ['team', 'availableRoles', 'permissions'],
+  props: ['team', 'availableRoles', 'permissions', 'settings'],
   components: {
     AppLayout: _Layouts_AppLayout_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     DeleteTeamForm: _Pages_Teams_Partials_DeleteTeamForm_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
     JetSectionBorder: _Jetstream_SectionBorder_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
     TeamMemberManager: _Pages_Teams_Partials_TeamMemberManager_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    UpdateTeamNameForm: _Pages_Teams_Partials_UpdateTeamNameForm_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+    UpdateTeamNameForm: _Pages_Teams_Partials_UpdateTeamNameForm_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    ThemeSettingsTeamForm: _Pages_Teams_Partials_ThemeSettingsTeamForm_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
   }
 }));
 
@@ -23930,26 +23991,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  viewBox: "0 0 48 48",
+  width: "163",
+  height: "48",
+  viewBox: "0 0 163 56",
   fill: "none",
   xmlns: "http://www.w3.org/2000/svg"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
-  d: "M11.395 44.428C4.557 40.198 0 32.632 0 24 0 10.745 10.745 0 24 0a23.891 23.891 0 0113.997 4.502c-.2 17.907-11.097 33.245-26.602 39.926z",
-  fill: "#6875F5"
-}, null, -1
-/* HOISTED */
-);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<g clip-path=\"url(#clip0)\"><path d=\"M137.827 49.3161V21.8161H131.143V49.3161H5.95705V5.87658H10.8197V0H0V55.1922H137.837V49.3161H137.827Z\" fill=\"#773dbd\"></path><path d=\"M131.285 14.5415H137.969V20.1416H131.285V14.5415Z\" fill=\"#773dbd\"></path><path d=\"M39.7168 14.5415H46.4009V20.1416H39.7168V14.5415Z\" fill=\"#773dbd\"></path><path d=\"M137.827 49.3161V21.8161H131.143V49.3161H5.95705V5.87658H10.8197V0H0V55.1922H137.837V49.3161H137.827Z\" fill=\"#773dbd\"></path><path d=\"M13.7836 0.000488281V0.00337685H13.7246V39.717H16.7502V39.7174H36.8756V32.7952H21.3174V5.87707H164.85V49.3166H140.739V55.1915H170.807V0.000488281H13.7836Z\" fill=\"#773dbd\"></path><path d=\"M46.2222 21.8164V39.9356H39.623V21.8164H46.2222Z\" fill=\"#773dbd\"></path><path d=\"M63.894 25.7284H76.9904C76.9904 27.0744 76.9339 28.2984 76.8208 29.3981C76.7077 30.4978 76.4849 31.5195 76.1478 32.4624C75.6769 33.7866 75.0369 34.9586 74.2289 35.9803C73.421 37.0016 72.4731 37.8537 71.3845 38.5392C70.2955 39.2233 69.1001 39.7457 67.7994 40.1035C66.4971 40.4629 65.1275 40.6433 63.6918 40.6433C61.7165 40.6433 59.9152 40.3169 58.2882 39.6657C56.6611 39.0162 55.263 38.1013 54.0973 36.9232C52.9299 35.7451 52.0216 34.3297 51.3705 32.6807C50.7193 31.0318 50.3945 29.2087 50.3945 27.2098C50.3945 25.2361 50.7131 23.4221 51.3531 21.7731C51.9931 20.1241 52.9018 18.7153 54.0799 17.5479C55.2581 16.3822 56.678 15.4723 58.3381 14.8211C59.9998 14.17 61.851 13.8452 63.894 13.8452C66.5408 13.8452 68.8644 14.418 70.8621 15.5618C72.8593 16.7074 74.4427 18.4801 75.6097 20.8805L69.3477 23.474C68.7642 22.0822 68.0061 21.0827 67.0744 20.4774C66.1438 19.8716 65.0833 19.5691 63.894 19.5691C62.9057 19.5691 62.0082 19.7544 61.2003 20.1245C60.3923 20.4947 59.7019 21.0221 59.1308 21.7062C58.558 22.3921 58.1095 23.2157 57.7831 24.1805C57.4583 25.1453 57.2953 26.2231 57.2953 27.4128C57.2953 28.4907 57.4348 29.4885 57.7158 30.4095C57.9968 31.3289 58.4173 32.1261 58.9789 32.7992C59.5389 33.4722 60.2359 33.9946 61.0657 34.3652C61.8956 34.7353 62.8624 34.9206 63.9621 34.9206C64.6116 34.9206 65.2409 34.8484 65.8463 34.7011C66.4521 34.5566 66.9964 34.3198 67.4796 33.995C67.9611 33.6703 68.3598 33.2481 68.675 32.7319C68.9887 32.2157 69.2024 31.588 69.3138 30.8477H63.8945V25.7284H63.894Z\" fill=\"#773dbd\"></path><path d=\"M87.7632 24.3479H97.2901V14.5527H103.888V39.9358H97.2901V29.466H87.7632V39.9358H81.1641V14.5527H87.7632V24.3479Z\" fill=\"#773dbd\"></path><path d=\"M118.837 20.14V39.9358H112.238V20.14H106.818V14.5527H124.256V20.14H118.837Z\" fill=\"#773dbd\"></path><path d=\"M154.265 20.14V39.9358H147.665V20.14H142.246V14.5527H159.684V20.14H154.265Z\" fill=\"#773dbd\"></path></g><defs><clipPath id=\"clip0\"><rect width=\"170.805\" height=\"55.1922\" fill=\"#773dbd\"></rect></clipPath></defs>", 2);
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
-  d: "M14.134 45.885A23.914 23.914 0 0024 48c13.255 0 24-10.745 24-24 0-3.516-.756-6.856-2.115-9.866-4.659 15.143-16.608 27.092-31.75 31.751z",
-  fill: "#6875F5"
-}, null, -1
-/* HOISTED */
-);
-
-var _hoisted_4 = [_hoisted_2, _hoisted_3];
+var _hoisted_4 = [_hoisted_2];
 function render(_ctx, _cache) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("svg", _hoisted_1, _hoisted_4);
 }
@@ -28978,6 +29029,205 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=template&id=fefd2e5c":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=template&id=fefd2e5c ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Settings ");
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" The team's settings. ");
+
+var _hoisted_3 = {
+  "class": "col-span-6 sm:col-span-4"
+};
+var _hoisted_4 = {
+  "class": "col-span-6 sm:col-span-4"
+};
+var _hoisted_5 = {
+  "class": "col-span-6 sm:col-span-4"
+};
+var _hoisted_6 = {
+  "class": "col-span-6 sm:col-span-4"
+};
+var _hoisted_7 = {
+  "class": "col-span-6 sm:col-span-4"
+};
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Saved. ");
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Save ");
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_jet_label = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("jet-label");
+
+  var _component_jet_input = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("jet-input");
+
+  var _component_jet_input_error = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("jet-input-error");
+
+  var _component_jet_action_message = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("jet-action-message");
+
+  var _component_jet_button = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("jet-button");
+
+  var _component_jet_form_section = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("jet-form-section");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_jet_form_section, {
+    onSubmitted: _ctx.updateTeamSettings
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createSlots)({
+    title: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_1];
+    }),
+    description: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_2];
+    }),
+    form: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Team Name "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_label, {
+        "for": "name",
+        value: "Title"
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input, {
+        id: "title",
+        type: "text",
+        "class": "mt-1 block w-full",
+        modelValue: _ctx.form.title,
+        "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+          return _ctx.form.title = $event;
+        }),
+        disabled: !_ctx.permissions.canUpdateTeam
+      }, null, 8
+      /* PROPS */
+      , ["modelValue", "disabled"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input_error, {
+        message: _ctx.form.errors.title,
+        "class": "mt-2"
+      }, null, 8
+      /* PROPS */
+      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_label, {
+        "for": "name",
+        value: "Header"
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input, {
+        id: "header",
+        type: "text",
+        "class": "mt-1 block w-full",
+        modelValue: _ctx.form.header,
+        "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+          return _ctx.form.header = $event;
+        }),
+        disabled: !_ctx.permissions.canUpdateTeam
+      }, null, 8
+      /* PROPS */
+      , ["modelValue", "disabled"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input_error, {
+        message: _ctx.form.errors.header,
+        "class": "mt-2"
+      }, null, 8
+      /* PROPS */
+      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_label, {
+        "for": "name",
+        value: "Image"
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input, {
+        id: "image",
+        type: "text",
+        "class": "mt-1 block w-full",
+        modelValue: _ctx.form.image,
+        "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+          return _ctx.form.image = $event;
+        }),
+        disabled: !_ctx.permissions.canUpdateTeam
+      }, null, 8
+      /* PROPS */
+      , ["modelValue", "disabled"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input_error, {
+        message: _ctx.form.errors.image,
+        "class": "mt-2"
+      }, null, 8
+      /* PROPS */
+      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_label, {
+        "for": "name",
+        value: "Primary Color"
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input, {
+        id: "primaryColor",
+        type: "text",
+        "class": "mt-1 block w-full",
+        modelValue: _ctx.form.primaryColor,
+        "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
+          return _ctx.form.primaryColor = $event;
+        }),
+        disabled: !_ctx.permissions.canUpdateTeam
+      }, null, 8
+      /* PROPS */
+      , ["modelValue", "disabled"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input_error, {
+        message: _ctx.form.errors.primaryColor,
+        "class": "mt-2"
+      }, null, 8
+      /* PROPS */
+      , ["message"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_label, {
+        "for": "name",
+        value: "Secondary Color"
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input, {
+        id: "secondaryColor",
+        type: "text",
+        "class": "mt-1 block w-full",
+        modelValue: _ctx.form.secondaryColor,
+        "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
+          return _ctx.form.secondaryColor = $event;
+        }),
+        disabled: !_ctx.permissions.canUpdateTeam
+      }, null, 8
+      /* PROPS */
+      , ["modelValue", "disabled"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_input_error, {
+        message: _ctx.form.errors.secondaryColor,
+        "class": "mt-2"
+      }, null, 8
+      /* PROPS */
+      , ["message"])])];
+    }),
+    _: 2
+    /* DYNAMIC */
+
+  }, [_ctx.permissions.canUpdateTeam ? {
+    name: "actions",
+    fn: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_action_message, {
+        on: _ctx.form.recentlySuccessful,
+        "class": "mr-3"
+      }, {
+        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+          return [_hoisted_8];
+        }),
+        _: 1
+        /* STABLE */
+
+      }, 8
+      /* PROPS */
+      , ["on"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_button, {
+        "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)({
+          'opacity-25': _ctx.form.processing
+        }),
+        disabled: _ctx.form.processing
+      }, {
+        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+          return [_hoisted_9];
+        }),
+        _: 1
+        /* STABLE */
+
+      }, 8
+      /* PROPS */
+      , ["class", "disabled"])];
+    })
+  } : undefined]), 1032
+  /* PROPS, DYNAMIC_SLOTS */
+  , ["onSubmitted"]);
+}
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue?vue&type=template&id=8952f180":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue?vue&type=template&id=8952f180 ***!
@@ -29142,6 +29392,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   var _component_team_member_manager = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("team-member-manager");
 
+  var _component_theme_settings_team_form = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("theme-settings-team-form");
+
   var _component_jet_section_border = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("jet-section-border");
 
   var _component_delete_team_form = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("delete-team-form");
@@ -29167,7 +29419,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         "user-permissions": _ctx.permissions
       }, null, 8
       /* PROPS */
-      , ["team", "available-roles", "user-permissions"]), _ctx.permissions.canDeleteTeam && !_ctx.team.personal_team ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+      , ["team", "available-roles", "user-permissions"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_theme_settings_team_form, {
+        team: _ctx.team,
+        permissions: _ctx.permissions,
+        settings: _ctx.settings
+      }, null, 8
+      /* PROPS */
+      , ["team", "permissions", "settings"]), _ctx.permissions.canDeleteTeam && !_ctx.team.personal_team ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         key: 0
       }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_jet_section_border), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_delete_team_form, {
         "class": "mt-10 sm:mt-0",
@@ -55046,6 +55304,34 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ThemeSettingsTeamForm_vue_vue_type_template_id_fefd2e5c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ThemeSettingsTeamForm.vue?vue&type=template&id=fefd2e5c */ "./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=template&id=fefd2e5c");
+/* harmony import */ var _ThemeSettingsTeamForm_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ThemeSettingsTeamForm.vue?vue&type=script&lang=js */ "./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=script&lang=js");
+/* harmony import */ var _var_www_html_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,_var_www_html_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_ThemeSettingsTeamForm_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_ThemeSettingsTeamForm_vue_vue_type_template_id_fefd2e5c__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue":
 /*!******************************************************************!*\
   !*** ./resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue ***!
@@ -55861,6 +56147,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TeamMemberManager_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TeamMemberManager_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./TeamMemberManager.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Teams/Partials/TeamMemberManager.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=script&lang=js":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=script&lang=js ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ThemeSettingsTeamForm_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ThemeSettingsTeamForm_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ThemeSettingsTeamForm.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=script&lang=js");
  
 
 /***/ }),
@@ -56713,6 +57015,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=template&id=fefd2e5c":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=template&id=fefd2e5c ***!
+  \***************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ThemeSettingsTeamForm_vue_vue_type_template_id_fefd2e5c__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_ThemeSettingsTeamForm_vue_vue_type_template_id_fefd2e5c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./ThemeSettingsTeamForm.vue?vue&type=template&id=fefd2e5c */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue?vue&type=template&id=fefd2e5c");
+
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue?vue&type=template&id=8952f180":
 /*!************************************************************************************************!*\
   !*** ./resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue?vue&type=template&id=8952f180 ***!
@@ -57048,6 +57366,7 @@ var map = {
 	"./Teams/Partials/CreateTeamForm.vue": "./resources/js/Pages/Teams/Partials/CreateTeamForm.vue",
 	"./Teams/Partials/DeleteTeamForm.vue": "./resources/js/Pages/Teams/Partials/DeleteTeamForm.vue",
 	"./Teams/Partials/TeamMemberManager.vue": "./resources/js/Pages/Teams/Partials/TeamMemberManager.vue",
+	"./Teams/Partials/ThemeSettingsTeamForm.vue": "./resources/js/Pages/Teams/Partials/ThemeSettingsTeamForm.vue",
 	"./Teams/Partials/UpdateTeamNameForm.vue": "./resources/js/Pages/Teams/Partials/UpdateTeamNameForm.vue",
 	"./Teams/Show.vue": "./resources/js/Pages/Teams/Show.vue",
 	"./TermsOfService.vue": "./resources/js/Pages/TermsOfService.vue",
