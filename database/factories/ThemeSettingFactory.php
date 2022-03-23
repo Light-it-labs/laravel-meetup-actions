@@ -28,7 +28,8 @@ class ThemeSettingFactory extends Factory
                 'header' => 'header-1',
                 'theme' => [
                     'colors' => [
-                        'primaryColor' => $this->faker->rgbaCssColor
+                        'primaryColor' => $this->faker->rgbaCssColor,
+                        'secondaryColor' => $this->faker->rgbaCssColor
                     ]
                 ]
             ],
