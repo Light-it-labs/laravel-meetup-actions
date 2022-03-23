@@ -16,3 +16,14 @@ jobs:
         uses: jbrooksuk/laravel-forge-action@v1.0.2
         with:
           trigger_url: ${{ secrets.TRIGGER_URL }}
+
+      - name: Slack Notification
+        uses: 8398a7/action-slack@v2
+        with:
+          status: ${{ job.status }}
+          author_name: Deployment Job
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        if: always()
+
