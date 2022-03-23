@@ -5,7 +5,6 @@ namespace App\Actions\Api;
 use App\Http\Requests\GetThemeSettingRequest;
 use App\Http\Resources\ThemeSettingResource;
 use App\Models\ThemeSetting;
-use Illuminate\Http\JsonResponse;
 
 class GetThemeSettingController
 {

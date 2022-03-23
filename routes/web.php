@@ -32,4 +32,3 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware('auth:sanctum')
     ->put('/teams/{team}/theme/settings', StoreThemeSettingController::class)
     ->name('teams.settings.update');
-
