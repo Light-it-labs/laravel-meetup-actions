@@ -29,3 +29,8 @@ jobs:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
       run: vendor/bin/phpunit
+    - name: PHP Code Style (phpcs)
+      uses: chindit/actions-phpcs@master
+      with:
+        cli: "--standard=PSR12"
+        dir: app/
