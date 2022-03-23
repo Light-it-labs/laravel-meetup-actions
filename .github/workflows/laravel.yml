@@ -10,9 +10,9 @@ jobs:
       postgres:
         image: postgres:13.5
         env:
-          POSTGRES_USER: meetup_lighit
+          POSTGRES_USER: meetup_lightit
           POSTGRES_PASSWORD: password
-          POSTGRES_DB: meetup_lighit_test
+          POSTGRES_DB: meetup_lightit_test
         ports:
           - 5432:5432
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
@@ -70,8 +70,8 @@ jobs:
           DB_CONNECTION: pgsql
           DB_HOST: postgres
           DB_PORT: 5432
-          DB_DATABASE: meetup_lighit_test
-          DB_USERNAME: meetup_lighit
+          DB_DATABASE: meetup_lightit_test
+          DB_USERNAME: meetup_lightit
           DB_PASSWORD: password
 
       - name: Execute Code Static Analysis (PHP Stan + Larastan)
