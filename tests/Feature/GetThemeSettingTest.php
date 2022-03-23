@@ -28,6 +28,6 @@ class GetThemeSettingTest extends TestCase
         Sanctum::actingAs($user);
 
         $response = $this->getJson('/api/theme/settings');
-        $response->dd();
+        $response->assertSuccessful();
     }
 }
