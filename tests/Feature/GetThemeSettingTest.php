@@ -22,7 +22,7 @@ class GetThemeSettingTest extends TestCase
         $user = User::factory()->withPersonalTeam()->create();
 
         ThemeSetting::factory()->create([
-            'team_id' => $user->currentTeam->id
+            'team_id' => $user->currentTeam->id,
         ]);
 
         Sanctum::actingAs($user);

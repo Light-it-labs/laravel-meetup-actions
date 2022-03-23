@@ -12,6 +12,6 @@ class ThemeSetting extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'payload' => 'array'
+        'payload' => 'array',
     ];
 }

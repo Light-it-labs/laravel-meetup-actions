@@ -3,7 +3,6 @@
 namespace App\Actions\Api;
 
 use App\Http\Requests\StoreThemeSettingRequest;
-use App\Http\Resources\ThemeSettingResource;
 use App\Models\Team;
 use App\Models\ThemeSetting;
 

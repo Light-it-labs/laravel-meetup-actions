@@ -28,7 +28,7 @@ class StoreThemeSettingRequest extends FormRequest
                     'primaryColor' => $this->input('primaryColor'),
                     'secondaryColor' => $this->input('secondaryColor'),
                 ],
-            ]
+            ],
         ];
     }
 }
