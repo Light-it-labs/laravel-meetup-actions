@@ -30,6 +30,7 @@ jobs:
         DB_DATABASE: database/database.sqlite
       run: vendor/bin/phpunit
     - name: PHP Code Style (phpcs)
-      uses: docker://oskarstark/php-cs-fixer-ga
+      uses: chindit/actions-phpcs@master
       with:
-        args: --config=.php-cs-fixer.php --allow-risky=yes
+        cli: "--standard=PSR12"
+        dir: app/
