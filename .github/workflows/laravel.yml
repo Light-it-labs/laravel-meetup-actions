@@ -29,3 +29,7 @@ jobs:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
       run: vendor/bin/phpunit
+    - name: PHP Code Style (phpcs)
+      uses: chindit/actions-phpcs@master
+      with:
+        cli: "--config=.php-cs-fixer.php"
