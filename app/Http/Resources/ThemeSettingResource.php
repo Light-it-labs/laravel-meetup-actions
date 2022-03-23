@@ -2,8 +2,12 @@
 
 namespace App\Http\Resources;
 
+use App\Models\ThemeSetting;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/**
+ * @mixin ThemeSetting
+ */
 class ThemeSettingResource extends JsonResource
 {
     /**
